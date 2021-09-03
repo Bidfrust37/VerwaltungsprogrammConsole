@@ -1,0 +1,14 @@
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\bin\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.exe
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\bin\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.deps.json
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\bin\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.runtimeconfig.json
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\bin\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.runtimeconfig.dev.json
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\bin\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.dll
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\bin\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.pdb
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\obj\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\obj\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.AssemblyInfoInputs.cache
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\obj\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.AssemblyInfo.cs
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\obj\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.csproj.CoreCompileInputs.cache
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\obj\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.dll
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\obj\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.pdb
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\obj\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.genruntimeconfig.cache
+C:\Users\Lars\Documents\School\BKT\AB 2\LF08\VerwaltungsprogrammConsole\Verwaltungsprogramm_Console\Verwaltungsprogramm_Console\obj\Debug\netcoreapp3.1\Verwaltungsprogramm_Console.csproj.AssemblyReference.cache

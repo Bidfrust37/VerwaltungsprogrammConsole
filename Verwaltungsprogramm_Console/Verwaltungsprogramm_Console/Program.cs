@@ -6,12 +6,12 @@ namespace Verwaltungsprogramm_Console
     {
         static void Main(string[] args)
         {
-        bool run = true;
+            bool run = true;
             Manager manager = new Manager();
             while (run)
             {
                 ResetView(manager);
-                
+
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.D1:
@@ -49,9 +49,11 @@ namespace Verwaltungsprogramm_Console
         {
             string welcomeString =
 $@"
-+--------------------+---------------------+
-|  Neuer Eintrag(1)  |  Liste anzeigen(2)  |
-+--------------------+---------------------+
++-------------------------------+
+|  Mega nice Personenverwaltung |
++---------------+---------------+-------------+-----------------+--------------+-------------+
+|  Erfassen(1)  |  Anzeigen(2)  |  Suchen(3)  |  Bearbeiten(4)  |  Löschen(5)  | Beenden(0)  |
++---------------+---------------+-------------+-----------------+--------------+-------------+
 ";
 
             Console.Clear();

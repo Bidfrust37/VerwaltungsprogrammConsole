@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Verwaltungsprogramm_Console
 {
@@ -8,6 +15,9 @@ namespace Verwaltungsprogramm_Console
         {
             bool run = true;
             Manager manager = new Manager();
+            List<Person> p = LoadFromDisk();
+            if (p != null)
+                manager.allPersons = p;
             while (run)
             {
                 ResetView(manager);
@@ -26,17 +36,21 @@ namespace Verwaltungsprogramm_Console
 
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
+                        manager.DisplaySinglePerson(manager.SearchPerson());
                         break;
 
                     case ConsoleKey.D4:
                     case ConsoleKey.NumPad4:
+                        manager.EditPerson(manager.SearchPerson());
                         break;
 
                     case ConsoleKey.D5:
                     case ConsoleKey.NumPad5:
+                        manager.DeletePerson(manager.SearchPerson());
                         break;
                     case ConsoleKey.D0:
                     case ConsoleKey.NumPad0:
+                        SaveToDisk(manager.allPersons);
                         run = false;
                         break;
                     default:
@@ -45,6 +59,39 @@ namespace Verwaltungsprogramm_Console
             }
         }
 
+        private static void SaveToDisk(List<Person> l)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
+            using(var sww = new StringWriter())
+            {
+                using(XmlWriter writer = XmlWriter.Create(sww))
+                {
+                    serializer.Serialize(writer, l);
+                    string xml = sww.ToString();
+                    File.WriteAllText("xml.xml", xml);
+                }
+            }
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Mitgliederliste.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, l);
+            stream.Close(); 
+        }
+        private static List<Person> LoadFromDisk()
+        {
+            try
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("Mitgliederliste.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<Person> returnList = (List<Person>)formatter.Deserialize(stream);
+                stream.Close();
+                return returnList;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        
         private static void ResetView(Manager manager)
         {
             string welcomeString =

@@ -7,7 +7,7 @@ namespace Verwaltungsprogramm_Console
 {
     class Manager
     {
-        private List<Person> allPersons;
+        public List<Person> allPersons;
 
         public void ShowCompleteList()
         {
@@ -72,6 +72,86 @@ namespace Verwaltungsprogramm_Console
                 return allPersons.Count();
             else
                 return 0;
+        }
+
+        public void DisplaySinglePerson(Person person)
+        {
+            if (person == null)
+                return;
+            
+            Console.WriteLine("ID: " + person.ID + ": " + person.Name + ", " + person.Vorname + ", " + person.Geburtsdatum + ", " + person.Mail + ", " + person.Telefon);
+            
+            Console.WriteLine("\r\nZum fortfahren beliebige Taste drücken");
+            Console.ReadKey();
+        }
+        
+        public Person SearchPerson()
+        {
+            Console.WriteLine("Person suchen:");
+            string Name, Vorname;
+            Console.WriteLine("Name:");
+            Name = Console.ReadLine();
+            Console.WriteLine("Voname:");
+            Vorname = Console.ReadLine();
+
+            List<Person> foundPersons = allPersons
+                .Where(x => x.Name.ToLower() == Name.ToLower() && x.Vorname.ToLower() == Vorname.ToLower()).ToList();
+            if (foundPersons.Count() != 0)
+            {
+                if (foundPersons.Count() == 1)
+                {
+                    return foundPersons[0];
+                }
+                else
+                {
+                    Console.WriteLine("Mehrere Personen gefunden");
+                    return null;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Keine Person gefunden");
+                return null;
+            }
+        }
+
+        public void DeletePerson(Person person)
+        {
+            if(person == null)
+                return;
+            
+            allPersons.Remove(person);
+            Console.WriteLine("Eintrag erfolgreich gelöscht");
+            Console.WriteLine("\r\nZum fortfahren beliebige Taste drücken");
+            Console.ReadKey();
+        }
+
+        public void EditPerson(Person person)
+        {
+            if (person == null)
+                return;
+            string input = "";
+            Console.WriteLine();
+            Console.WriteLine("Person bearbeiten: ");
+            Console.WriteLine("Name: " + "'" + person.Name + "'");
+            input = Console.ReadLine();
+            input = input != null ? person.Name = input : person.Name = person.Name;
+            Console.WriteLine("Vorname: ");
+            input = Console.ReadLine();
+            input = input != null ? person.Vorname = input : person.Vorname = person.Name;
+            Console.WriteLine("Geburtsdatum: ");
+            input = Console.ReadLine();
+            input = input != null ? person.Geburtsdatum = input : person.Geburtsdatum = person.Name;
+            Console.WriteLine("Mail: ");
+            input = Console.ReadLine();
+            input = input != null ? person.Mail = input : person.Mail = person.Name;
+            Console.WriteLine("Telefon: ");
+            input = Console.ReadLine();
+            input = input != null ? person.Telefon = input : person.Telefon = person.Name;
+            
+            Console.WriteLine("Eintrag erfolgreich geändert!");
+            Console.WriteLine("\r\nZum fortfahren beliebige Taste drücken");
+            Console.ReadKey();
         }
     }
 }

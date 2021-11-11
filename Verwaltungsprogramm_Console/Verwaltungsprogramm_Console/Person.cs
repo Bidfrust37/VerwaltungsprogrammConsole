@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Verwaltungsprogramm_Console
 {
-    class Person
+    [Serializable]
+    public class Person
     {
         public int ID;
         public string Name;
